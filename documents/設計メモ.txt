@@ -1,0 +1,37 @@
+■ タイトル
+チャージ支出管理アプリ
+
+■ 目的
+SuicaやPayPayなど、チャージした金額を記録・管理するアプリ。
+
+■ ターゲットOS
+iOS
+
+■ 開発環境
+- 開発OS：Windows 11
+- 実機テスト：iOS実機あり
+- 使用言語：Dart
+- 使用フレームワーク：Flutter
+
+■ データ管理
+- Googleスプレッドシートを簡易データベースとして使用
+- 使用パッケージ：gsheets（https://pub.dev/packages/gsheets）
+
+■ iOS実機テスト方法（Windows開発環境から）
+Codemagicを使ってiOSビルド
+- Codemagic（https://codemagic.io/）を使ってFlutterプロジェクトをCIビルド
+- iOS向けの.ipaファイルを作成
+- TestFlight経由でiOS実機に配布・テスト可能
+
+■ 開発の進め方（流れ）
+1. FlutterでUIや機能を作成（Androidエミュレータなどでテスト）
+2. gsheetsパッケージでGoogleスプレッドシートと連携
+3. CodemagicでiOS用にビルド
+4. TestFlightでiOS実機に配布・テスト
+
+■ 備考
+- Googleスプレッドシートはネット接続必須
+- オフライン対応したい場合はローカルに一時保存の処理が必要
+
+■納期
+5/31
