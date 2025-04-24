@@ -13,12 +13,13 @@ class MyApp extends StatelessWidget {
       title: 'Hello World App',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Hello World App'),
+          title: const Text('HOME-MoneyLog'),
+          backgroundColor: Colors.blue,
         ),
         body: const Center(
           child: Text(
-            'こんにちは',
-            style: TextStyle(fontSize: 40),
+            '支出管理',
+            style: TextStyle(fontSize: 40,color: Colors.blue),
           ),
         ),
       ),
