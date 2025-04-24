@@ -12,15 +12,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hello World App',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('HOME-MoneyLog'),
+        appBar: AppBar(title: const Text('ボタン'),
           backgroundColor: Colors.blue,
 
         ),
-        body: const Center(
-          child: Text(
-            '支出管理',
-            style: TextStyle(fontSize: 40,color: Colors.blue),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: (){
+              print("ボタンが押されました");
+            },
+            child: const Text("押してみて？"),
           ),
         ),
       ),
