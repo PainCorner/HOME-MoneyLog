@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('HOME-MoneyLog'),
           backgroundColor: Colors.blue,
+
         ),
         body: const Center(
           child: Text(
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
             style: TextStyle(fontSize: 40,color: Colors.blue),
           ),
         ),
+        bottomNavigationBar: ,
       ),
     );
   }
