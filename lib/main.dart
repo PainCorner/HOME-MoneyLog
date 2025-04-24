@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
             style: TextStyle(fontSize: 40,color: Colors.blue),
           ),
         ),
-        bottomNavigationBar: ,
       ),
     );
   }
