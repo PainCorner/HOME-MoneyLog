@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
                       builder: (BuildContext context) {
                         return AlertDialog(
                           title: Text("お知らせ"),
-                          content: Text("アラート成功！！"),
+                          content: Text("成功させたい！！！"),
                           actions: [
                             TextButton(
                               onPressed: () {
