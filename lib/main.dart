@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,50 +13,27 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue[50],
         appBar: AppBar(
           title: Text(
-            "支出管理",
-            style: TextStyle(fontSize: 25, color: Colors.white),
+            "ようこそ",
+            style: TextStyle(color: Colors.white, fontSize: 30),
           ),
-          backgroundColor: Colors.blueAccent,
-          centerTitle: true,
+          backgroundColor: Colors.black,
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("成功しました!", style: TextStyle(fontSize: 40)),
-              SizedBox(height: 30),
-              Builder( // ここでBuilder使うのがポイント！
-                builder: (context) => ElevatedButton(
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: Text("お知らせ"),
-                          content: Text("成功させたい！！！"),
-                          actions: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              child: Text("OK"),
-                            ),
-                          ],
-                        );
-                      },
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueAccent,
-                    shape: StadiumBorder(),
-                  ),
-                  child: Text("続けて管理する", style: TextStyle(fontSize: 20, color: Colors.white)),
+          child: Container(
+            width: 300,
+            height: 150,
+            color: Colors.greenAccent,
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.blue, width: 4.0),
                 ),
+                labelText: 'テキストを入力',
               ),
-            ],
+              textAlign: TextAlign.center,
+            ),
           ),
         ),
       ),
