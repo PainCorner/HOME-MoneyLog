@@ -1,0 +1,38 @@
+# Geminiにより作成
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - in-progress # あなたの作業ブランチ名
+
+permissions:
+  contents: write # gh-pagesへの書き込み許可
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+          cache: true # ビルド時間の短縮
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Web
+        # 【重要】"/リポジトリ名/" を自分のリポジトリ名に書き換えてください
+        # 例：https://username.github.io/my-app/ なら "/my-app/"
+        run: flutter build web --release --base-href "/HOME-MoneyLog/"
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build/web
+          branch: gh-pages
