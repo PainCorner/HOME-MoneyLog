@@ -1,0 +1,9 @@
+{
+	"[dart]": {
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false
+	},
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false
+}
